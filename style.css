@@ -1,0 +1,125 @@
+body {
+    font-family: futura-pt;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* =============================================================== */
+/* PROFILE HEADER STYLES                                           */
+/* =============================================================== */
+.profile-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    /* --- CHANGED --- */
+    width: 200px;         /* Set a fixed width */
+    height: auto;         /* Height is automatic to maintain aspect ratio */
+    margin-bottom: 20px;
+    /* Removed border-radius and object-fit */
+}
+
+.intro-text {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* =============================================================== */
+/* COLLAPSIBLE ACCORDION STYLES                                    */
+/* =============================================================== */
+.collapsible {
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;               /* --- REMOVED border --- */
+    text-align: left;
+    outline: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    
+    /* --- NEW --- */
+    border-top: 1px solid #ddd; /* Add horizontal line above button */
+
+    /* --- NEW: Use Flexbox for alignment --- */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Add a final bottom border to the last collapsible button for a clean finish */
+.collapsible:last-of-type {
+     border-bottom: 1px solid #ddd;
+}
+
+.collapsible:hover {
+    background-color: #f9f9f9;
+}
+
+.collapsible.active {
+    background-color: #f0f0f0;
+}
+
+
+.collapsible::after {
+    content: '\002B';
+    color: #333;
+    font-weight: 300;
+    font-size: 1.5em;
+    /* --- REMOVED float and line-height --- */
+}
+
+.collapsible.active::after {
+    content: "\2212";
+}
+
+.content {
+    /* --- CHANGED --- */
+    padding: 25px 18px; /* Added padding for breathing room */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #ffffff;
+    border: none; /* Ensure no border */
+    
+    /* Add a border below the content when it is open */
+    border-bottom: 1px solid #ddd;
+}
+
+/* =============================================================== */
+/* CONTENT LIST STYLES                                             */
+/* =============================================================== */
+
+.content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.content ul li, .content .teaching-entry {
+    margin-bottom: 20px;
+}
+
+.content ul li:last-child, .content .teaching-entry:last-child {
+    margin-bottom: 0;
+}
+
+.content h3, .content h4 {
+    margin-top: 0; /* Adjusted top margin for headings inside content */
+}
+
+.content .teaching-entry ul li {
+    margin-bottom: 0;
+}
