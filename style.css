@@ -1,28 +1,5 @@
-/* Futura-PT Light */
-@font-face {
-    font-family: 'futura';
-    src: url('./assets/FuturaCyrillicLight.ttf') format('truetype');
-    font-weight: 300; /* Or whatever weight 'light' corresponds to */
-    font-style: normal;
-}
-
-/* Futura-PT Regular */
-@font-face {
-    font-family: 'futura';
-    src: url('./assets/FuturaCyrillicMedium.ttf') format('truetype');
-    font-weight: 400; /* Or whatever weight 'regular' corresponds to */
-    font-style: normal;
-}
-
-/* Futura-PT Bold (if you have it) */
-@font-face {
-    font-family: 'futura';
-    src: url('./assets/FuturaCyrillicBold.ttf') format('truetype');
-    font-weight: 700; /* Or whatever weight 'bold' corresponds to */
-    font-style: normal;
-
 body {
-    font-family: futura;
+    font-family: futura-pt;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
