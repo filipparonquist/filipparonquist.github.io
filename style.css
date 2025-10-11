@@ -28,7 +28,6 @@ body {
     padding: 20px;
     background-color: #ffffff; /* CHANGED */
     color: #333;
-    text-align: left;
 }
 
 .container {
@@ -46,8 +45,8 @@ body {
 }
 
 .profile-pic {
-    width: 500px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -56,7 +55,6 @@ body {
     font-size: 1.1em;
     max-width: 600px;
     margin: 0 auto;
-    text-align: left;
 }
 
 
