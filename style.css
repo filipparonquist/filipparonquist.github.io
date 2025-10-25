@@ -191,3 +191,74 @@ strong {
 .content .teaching-entry ul li {
     margin-bottom: 0; /* Reset margin for nested list items if any */
 }
+
+/* Teaching two-column layout: dates on the left, course info on the right */
+.content .teaching-table {
+    display: grid;
+    grid-template-columns: 160px 1fr; /* fixed date column, flexible course column */
+    column-gap: 20px;
+    row-gap: 12px;
+    align-items: start;
+    margin-top: 10px;
+    margin-bottom: 24px; /* add space between the table and the next collapsible */
+}
+
+.content .teaching-table .date {
+    color: #333;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.content .teaching-table .course {
+    color: #333;
+}
+
+/* Stack into a single column on small screens */
+@media (max-width: 600px) {
+    .content .teaching-table {
+        grid-template-columns: 1fr;
+    }
+    .content .teaching-table .date {
+        margin-bottom: 4px;
+    }
+}
+
+/* Publication links row: horizontal links with a thin vertical separator */
+.content .pub-links {
+    display: inline-flex; /* keep links on the same line as the publication */
+    align-items: center;
+    gap: 0;
+    margin-left: 6px;
+    white-space: nowrap; /* keep the links on the same line as the publication text */
+}
+
+.content .pub-links {
+    display: inline-flex; /* keep links on the same line as the publication */
+    align-items: center;
+    gap: 0;
+    margin-left: 6px;
+    flex-wrap: nowrap; /* prevent wrapping between links */
+    white-space: nowrap; /* ensure links and separator stay on one line */
+}
+.content .pub-links a:hover {
+    text-decoration: underline;
+}
+
+.content .pub-links .pub-sep {
+    width: 1px;
+    height: 1em;
+    background-color: #d0d0d0;
+    margin: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* On small screens stack links and hide separator */
+@media (max-width: 600px) {
+    .content .pub-links {
+        display: inline-flex; /* still inline but allow wrapping */
+        flex-wrap: wrap;
+        white-space: normal; /* allow wrapping on small screens */
+    }
+    .content .pub-links .pub-sep { display: none; }
+}
