@@ -3,23 +3,34 @@ document.addEventListener("DOMContentLoaded", function() {
     var i;
 
     for (i = 0; i < coll.length; i++) {
+        // Insert animated icon markup inside each collapsible button
+        (function(button){
+            var icon = document.createElement('span');
+            icon.className = 'icon';
+            var lineV = document.createElement('span');
+            lineV.className = 'line v';
+            var lineH = document.createElement('span');
+            lineH.className = 'line h';
+            icon.appendChild(lineV);
+            icon.appendChild(lineH);
+            button.appendChild(icon);
+        })(coll[i]);
+
         coll[i].addEventListener("click", function() {
             this.classList.toggle("active");
-            
-            // --- CHANGED PART ---
+
+            // Find the next .content element (skip non-content siblings)
             var content = this.nextElementSibling;
-            // Loop until we find the 'content' div
             while (content && !content.classList.contains('content')) {
                 content = content.nextElementSibling;
             }
-            // --- END OF CHANGE ---
 
-            if (content) { // Make sure we found the content div
+            if (content) {
                 if (content.style.maxHeight){
                     content.style.maxHeight = null;
                 } else {
                     content.style.maxHeight = content.scrollHeight + "px";
-                } 
+                }
             }
         });
     }
