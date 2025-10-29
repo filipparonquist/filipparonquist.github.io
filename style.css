@@ -223,6 +223,12 @@ strong {
     margin-top: 25px;
 }
 
+/* Make abstracts inside list items have consistent spacing */
+.content ul li p {
+    margin: 0.4em 0 1em; /* small gap above, larger gap below */
+    line-height: 1.5;
+}
+
 /* Footer styling */
 .site-footer {
     margin-top: 10px; /* reduce space between footer and last collapsible */
