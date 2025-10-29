@@ -37,7 +37,7 @@ body {
 @media (max-width: 800px) {
     body {
         /* Compact layout for small screens */
-        padding: 100px 100px 24px;
+        padding: 24px 24px 24px;
     }
 }
 
