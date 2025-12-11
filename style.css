@@ -67,7 +67,7 @@ body {
 /* Limit the profile column (photo + intro text) so it never gets wider than 500px
    on very wide screens while staying fluid on smaller screens. */
 .profile-header, .profile-container {
-    max-width: 500px;
+    max-width: 420px;
     margin-left: auto;
     margin-right: auto;
 }
