@@ -67,7 +67,15 @@ body {
 /* Limit the profile column (photo + intro text) so it never gets wider than 500px
    on very wide screens while staying fluid on smaller screens. */
 .profile-header, .profile-container {
-    max-width: 420px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ensure collapsible buttons and their content share the same max width
+   as the profile column so the whole left column stays visually aligned. */
+.collapsible, .content {
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
